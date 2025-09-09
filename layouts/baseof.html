@@ -11,7 +11,7 @@
   data-auto-appearance="{{ site.Params.autoSwitchAppearance | default " true" }}">
   <body>
     <header>
-        Should load partial but can't find it :-)
+        {{ partial "header.html" . }}
     </header>
     <main>
         {{ block "main" . }}
