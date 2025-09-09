@@ -1,7 +1,7 @@
 ---
 title: "There is something rotten in the interview world"
 date: 2025-09-09T20:05:00Z
-draft: true
+draft: false
 author: k0bayashi
 ---
 
