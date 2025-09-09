@@ -1,21 +1,2 @@
-<!doctype html>
-<html
-  lang="{{ with site.Params.isoCode | default (site.LanguageCode | default " en") }}{{- . -}}{{ end }}"
-  dir="{{ if site.Params.rtl | default false -}}
-    rtl
-  {{- else -}}
-    ltr
-  {{- end }}"
-  class="scroll-smooth"
-  data-default-appearance="{{ site.Params.defaultAppearance | default " light" }}"
-  data-auto-appearance="{{ site.Params.autoSwitchAppearance | default " true" }}">
-  <body>
-    <nav>HERE MENU</nav>
-    <main>
-        HERE CONTENT
-    </main>
-    <footer>
-        HERE FOOTER
-    </footer>
-  </body>
-</html>
+{{ define "main" }} This will replace the content of the "block" action found in
+the base template. {{ end }}
