@@ -28,3 +28,4 @@ enableEmoji = true
 
 [outputs]
   home = ["HTML"]
+  posts = ["HTML"]
