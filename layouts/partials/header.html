@@ -1,5 +1,5 @@
-{{- $page := .page }}
-{{- $menuID := .menuID }}
+{{- $page := . }}
+{{- $menuID := .Params.menuID | default "main" }}
 
 {{- with index site.Menus $menuID }}
   <nav>
