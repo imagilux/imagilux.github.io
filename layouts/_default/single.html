@@ -1,23 +1,10 @@
-{{ define "main" }}
-<article>
-  <header>
-    <h1>{{ .Title }}</h1>
-    <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "January 2, 2006" }}</time>
-    {{ with .Params.author }}
-      <p>By {{ . }}</p>
-    {{ end }}
-  </header>
-
-  <div class="content">
-    {{ .Content }}
-  </div>
-
-  {{ with .Params.tags }}
-    <div class="tags">
-      {{ range . }}
-        <span class="tag">{{ . }}</span>
-      {{ end }}
-    </div>
-  {{ end }}
-</article>
-{{ end }}
+<!doctype html>
+<html>
+    <head>
+        <title>{{ .Title }}</title>
+    </head>
+    <body>
+        <h1>{{ .Title }}</h1>
+        <p>{{ .Content }}</p>
+    </body>
+</html>

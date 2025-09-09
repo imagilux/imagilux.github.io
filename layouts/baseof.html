@@ -9,6 +9,18 @@
   class="scroll-smooth"
   data-default-appearance="{{ site.Params.defaultAppearance | default " light" }}"
   data-auto-appearance="{{ site.Params.autoSwitchAppearance | default " true" }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
+    {{ with .Description }}<meta name="description" content="{{ . }}">{{ end }}
+    {{ with .Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+    <link rel="canonical" href="{{ .Permalink }}">
+    {{ range .AlternativeOutputFormats }}
+      <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
+    {{ end }}
+    {{ block "head" . }}{{ end }}
+  </head>
   <body>
     <header>
         {{ partial "header.html" . }}
