@@ -10,12 +10,18 @@
   data-default-appearance="{{ site.Params.defaultAppearance | default " light" }}"
   data-auto-appearance="{{ site.Params.autoSwitchAppearance | default " true" }}">
   <body>
-    <nav>HERE MENU</nav>
+    <header>
+        {{ partial "head.html" }}
+    </header>
     <main>
-        HERE CONTENT
+        {{ block "main" . }}
+          This will be replaced with content from the
+          corresponding "define" action found in the template
+          to which this base template is applied.
+        {{ end }}
     </main>
     <footer>
-        HERE FOOTER
+        {{ partial "footer.html" . }}
     </footer>
   </body>
 </html>
