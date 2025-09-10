@@ -4,7 +4,6 @@ date: 2025-09-09T20:05:00Z
 draft: false
 author: k0bayashi
 ---
-
 Today, I share with you a testimony of why your hiring process is most probably outdated and dumb as fuck.
 
 Dimitri Mitropoulos, cofounder of SquiggleConf and also known as MichiganTypeScript on YouTube, released a video few days ago, explaining how did he implemented the famous DOOM challenge using only TypeScript Types.
@@ -29,7 +28,7 @@ You probably get it now, he learn in six months to a year what most of us learnt
 
 But what could have been an already very impressive challenge took a turn when a comment on its presentation video ironically touched a point that is part of the things that upset me a lot: Interview process for companies.
 
-![img](content/posts/e9e5497f-a364-41ff-a21f-b2d0a17986fa/imgs/yt_comments.jpg)
+![img](imgs/yt_comments.jpg)
 
 Do you understand the irony of such interviews?
 
