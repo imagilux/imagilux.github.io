@@ -3,6 +3,7 @@ title: "Decart.ai OASIS model pave the way to future applications"
 date: 2025-10-09T20:05:00Z
 draft: false
 author: k0bayashi
+fingerprint: "d0c47c63-77c3-43ad-8348-d340bea503b4"
 ---
 There were a lot of discussions since a few days about the new decart.ai oasis generative model.
 

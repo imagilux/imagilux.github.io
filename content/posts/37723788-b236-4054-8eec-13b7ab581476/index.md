@@ -3,6 +3,7 @@ title: "We sucks at data and identity management"
 date: 2025-10-09T20:05:00Z
 draft: false
 author: k0bayashi
+fingerprint: "37723788-b236-4054-8eec-13b7ab581476"
 ---
 Yes, you read it correctly, your registration process sucks, it probably have too much steps, is cluttered by a shit ton of input box that you don’t even care enough to correctly internationalize (iXn) and that result in various flaws such as truncated last name, improperly managed special characters such as “ë,é,è” for instance or worse, bugs on your application.
 

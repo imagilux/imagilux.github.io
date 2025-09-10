@@ -1,8 +1,9 @@
 ---
 title: "The M.Night Shyamalan touch"
-date: 2025-09-09T20:05:00Z
+date: 2025-10-09T20:05:00Z
 draft: false
 author: k0bayashi
+fingerprint: "1f2aa3f2-3d11-4b28-aa79-ddfb023554b6"
 ---
 On those last few hours of the year let’s have a more lighter conversation and take a bit of those resting hours to talk about entertainment and especially about movies.
 
