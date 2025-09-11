@@ -28,7 +28,7 @@ header {
     border-bottom: 1px solid #e9ecef;
     min-height: 5vh;
     max-height: 5vh;
-    padding: 1rem 0;
+    align-items: center;
 }
 
 header nav ul {
