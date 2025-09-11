@@ -29,3 +29,8 @@ enableEmoji = true
 [outputs]
   home = ["HTML"]
   page = ["HTML"]
+
+[[menus.main]]
+  name = "Blog"
+  pageRef = "posts"
+  weight = 10
