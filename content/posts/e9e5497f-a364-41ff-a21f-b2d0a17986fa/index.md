@@ -29,7 +29,7 @@ You probably get it now, he learn in six months to a year what most of us learnt
 
 But what could have been an already very impressive challenge took a turn when a comment on its presentation video ironically touched a point that is part of the things that upset me a lot: Interview process for companies.
 
-![img](imgs/yt_comments.jpg)
+![youtube_comment](imgs/yt_comments.jpg)
 
 Do you understand the irony of such interviews?
 

@@ -26,23 +26,18 @@ The good
 
 Email registration is a very simple straightforward solution to register as a customer, it’s supposed to be as easy as:
 
-    Here is my email, here is the password that I want to set.
-
-    Oh, a new mail from the website with a validation link.
-
-    Click on it, you're done.
+> Here is my email, here is the password that I want to set.
+> Oh, a new mail from the website with a validation link.
+> Click on it, you're done.
 
 Three steps, nothing more.
 
 Now, because most of us use an email provider instead of hosting them ourselves, at some point those providers comes with the idea that rather than having to register your email with multiple websites, we could choose to rather have some sort of standard authentification process where they’ll provide the identity verification part to the website, that would avoid us all to get a shit ton of passwords to manage, it’s OIDC standard, and it’s supposed to be as easy as:
 
-    Click on your provider login with button.
-
-    Enter your email address and password.
-
-    Look for the information requested by the website.
-
-    Click ok, done.
+> Click on your provider login with button.
+> Enter your email address and password.
+> Look for the information requested by the website.
+> Click ok, done.
 
 It’s four steps, one more than with email but it’s due to the fact that it’s not the website that handle your password verification anymore and so needs for your email provider to do that part.
 
@@ -64,11 +59,11 @@ But right at the moment you thought everything was improving and goes the right 
 
 First came the fact that the more support OIDC gained, the more providers were supposed to support and the longer was the list of available providers on the registration page for the websites ending up with very ugly things like:
 
-![img](imgs/casdoor_login.jpg)
+![casdoor_login](imgs/casdoor_login.jpg)
 
 This, is just an illustration image to show you how many providers does exist out there and how you can quickly end up with an infinite list of them to deal with.
 
-    Casdoor as a product is a fantastic solution, use it ;-)
+> Casdoor as a product is a fantastic solution, use it ;-)
 
 Of course in here, it’s more a burden for the owner of the platform than for the user (although you could argue that it confuse them as they may use multiple providers and end up not remember which one they choose).
 
@@ -82,7 +77,7 @@ Too many websites abuse the not optional information retrieval system of OIDC to
 
 How many websites ask overly large amount of privileges to perform actions on your behalf or insanely large amount of data?
 
-![img](imgs/authorization_oidc.jpg)
+![authorization_oidc](imgs/authorization_oidc.jpg)
 
 Here is another illustration image to show you the issue.
 
@@ -106,7 +101,7 @@ After UI/UX, adoption, fragmentation, data leak and spam, now a day, people foun
 
 Here is an example of OIDC provider limitation that I face with an A.I services platform that I’m a paid customer of.
 
-![img](imgs/falai_login.jpg)
+![falai_login](imgs/falai_login.jpg)
 
 Yes, you’re reading it correctly, there is only one OIDC provider and it’s Github…
 
@@ -175,28 +170,26 @@ Once your user willingly decided, just use its email to discover its provider as
 
 To discover its provider, just use a simple two step process:
 
-    Does its email address part of a well-known provider?
-
-    If not, just look at its domain MX to discover it.
+> Does its email address part of a well-known provider?
+> If not, just look at its domain MX to discover it.
 
 If you encounter the situation where your user asked for a OIDC link with an email address where you can’t discover the provider, you have once again a simple and elegant way to handle that with two methods.
 
-    You decide to gently inform your user that you were not able to discover its provider and that you’ll fallback to a native email/password method if the customer agree.
+- You decide to gently inform your user that you were not able to discover its provider and that you’ll fallback to a native email/password method if the customer agree.
 
-    You decide to gently inform your user that you were not able to discover its provider but that you can offer him two options:
+- You decide to gently inform your user that you were not able to discover its provider but that you can offer him two options:
 
-        The customer can give you the appropriate OIDC informations for you to register him against a not known provider.
+  - The customer can give you the appropriate OIDC informations for you to register him against a not known provider.
 
-        The customer can’t give you the information but is willing to let you fallback to the native email/password method.
+  - The customer can’t give you the information but is willing to let you fallback to the native email/password method.
 
 If you discover multiple providers available for this email, let your customer choose from your supported list of providers and mark it as the default preferred provider.
 At login
 
 For that step, it’s even easier, nothing to detect, nothing ask for out of the email address and then checking out on your backend the account preferences.
 
-    Is that a registered account ? If not emit a nice message and show the signup form.
-
-    If it is, do we have an unexpired session and a valid token? If so, login. If not, just verify what’s its registered provider, redirect the authentication to the provider retrieve the token, ask for 2FA if enabled.
+> Is that a registered account ? If not emit a nice message and show the signup form.
+> If it is, do we have an unexpired session and a valid token? If so, login. If not, just verify what’s its registered provider, redirect the authentication to the provider retrieve the token, ask for 2FA if enabled.
 
 That’s it, your user is logged in painlessly and can use your platform seamlessly, regardless of its email or identity provider.
 

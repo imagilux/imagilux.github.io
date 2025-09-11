@@ -65,8 +65,7 @@ Or you can decide to go with siderolabs integrated solutions, but, at that momen
 Choice that inevitably leads you to become vendor lock-in because of the infamous « investment bias » which force you to double down onto an investment instead of being able to take your losses and start with something fresh.
 
 How many time did you find yourself on a meeting where a director told you something like:
-
-    > We can’t abandon this choice now, not after having invested that many time and money!
+> We can’t abandon this choice now, not after having invested that many time and money!
 
 This same director will decide that if it failed so far, it’s not because of the product or the technical choices, but because of the fact that they didn’t invest enough.
 
@@ -104,7 +103,7 @@ If siderolabs wanted to be really honest on their comparison upon reproducibilit
 
 As a final word, I would say that I wasn’t kine to recommend Talos as for the upper mentioned arguments already, but this latest very clumsy publication is definitely convincing me to not recommend it at all up till the company change its behavior and licenses choices.
 
-    > "God gives to honesty, loyalty, and righteousness an accent that can neither be counterfeited nor misunderstood."
+> "God gives to honesty, loyalty, and righteousness an accent that can neither be counterfeited nor misunderstood."
 
 ===
 Original posting was made on [substack](https://substack.com/@k0bayashi/p-151417335)

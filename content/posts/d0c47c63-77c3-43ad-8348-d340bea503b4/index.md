@@ -15,8 +15,8 @@ Having started my journey within I.T as a level designer most of the original Un
 
 I clearly remember that day I received my brand new UT-2004 Collector edition with its logitech headset, but most importantly its bonus DVD with a ton of inspirational content, damn! I was not even able to understand a single english word at that time! But just feel the energy and the window of the Unreal Editor used by those talented people was enough to spark something special in me. They were fueling my creativity and imagination with their passion and dedication to this game.
 
-![img](imgs/ut_box.jpg)
-![img](imgs/ut2004_bundle_box.jpg)
+![UT2004_Collector_box](imgs/ut_box.jpg)
+![UT2004_Collector_box_bundle](imgs/ut2004_bundle_box.jpg)
 
 No need to say how much Tim Sweeney answer to the Decart.ai demo disappointed my inner child.
 
@@ -34,7 +34,7 @@ People needs to understand and acknowledge that such tools, as for midjourney, w
 
 Here is a reminder of this journey so far, there is only 846 days in between both photos.
 
-![img](imgs/midjourney_evolution.jpg)
+![midjourney_evolution](imgs/midjourney_evolution.jpg)
 
 We could take the same example with videos as Sora premiered only a year ago with a few seconds sequence. Today we’re able to get minutes long of very interesting and promising content.
 
