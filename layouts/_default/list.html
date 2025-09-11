@@ -5,6 +5,9 @@
 
 {{ range .Pages }}
   <article>
+    <aside>
+        <img src="https://placehold.co/96" alt="Placeholder aside image."/>
+    </aside>
     <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
     <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "January 2, 2006" }}</time>
     {{ with .Params.author }}
