@@ -1,6 +1,6 @@
 ---
 title: "We sucks at data and identity management"
-date: 2025-10-09T20:05:00Z
+date: 2025-09-10T20:05:00Z
 draft: false
 author: k0bayashi
 fingerprint: "37723788-b236-4054-8eec-13b7ab581476"

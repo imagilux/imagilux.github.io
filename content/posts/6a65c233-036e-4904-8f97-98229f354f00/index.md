@@ -1,6 +1,6 @@
 ---
 title: "Why I’ll (probably) never adopt Talos linux"
-date: 2025-10-09T20:05:00Z
+date: 2025-09-10T20:05:00Z
 draft: false
 author: k0bayashi
 fingerprint: "6a65c233-036e-4904-8f97-98229f354f00"
