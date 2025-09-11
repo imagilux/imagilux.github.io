@@ -1,0 +1,40 @@
+<!doctype html>
+<html
+  lang="{{ with site.Params.isoCode | default (site.LanguageCode | default " en") }}{{- . -}}{{ end }}"
+  dir="{{ if site.Params.rtl | default false -}}
+    rtl
+  {{- else -}}
+    ltr
+  {{- end }}"
+  class="scroll-smooth"
+  data-default-appearance="{{ site.Params.defaultAppearance | default " light" }}"
+  data-auto-appearance="{{ site.Params.autoSwitchAppearance | default " true" }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
+    {{ with .Description }}<meta name="description" content="{{ . }}">{{ end }}
+    {{ with .Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+    <link rel="canonical" href="{{ .Permalink }}">
+    {{ range .AlternativeOutputFormats }}
+      <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
+    {{ end }}
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+    {{ block "head" . }}{{ end }}
+  </head>
+  <body>
+    <header class="container">
+        {{ partial "header.html" . }}
+    </header>
+    <main class="container">
+        {{ block "main" . }}
+          This will be replaced with content from the
+          corresponding "define" action found in the template
+          to which this base template is applied.
+        {{ end }}
+    </main>
+    <footer class="container">
+        {{ partial "footer.html" . }}
+    </footer>
+  </body>
+</html>

@@ -1,5 +1,6 @@
 baseURL = "https://www.imagilux.org/"
 defaultContentLanguage = "en"
+theme = "imagilux"
 
 enableRobotsTXT = true
 summaryLength = 0
