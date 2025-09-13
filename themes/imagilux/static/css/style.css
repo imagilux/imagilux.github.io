@@ -55,6 +55,8 @@ body {
     line-height: var(--line-height);
     color: var(--color-text);
     background-color: var(--color-background);
+    margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -65,39 +67,58 @@ body {
 }
 
 /* Header */
-header {
-    background: var(--color-background-light);
-    border-bottom: 1px solid var(--color-border);
-    min-height: var(--header-height);
-    max-height: var(--header-height);
+header.container {
+    position: fixed;
+    top: 20px;
+    left: 2vw;
+    right: 2vw;
+    transform: none;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    padding: 12px 24px;
+    min-height: auto;
+    max-height: auto;
     align-items: center;
+    width: auto;
+    flex-direction: row;
+    justify-content: flex-start;
 }
 
 header nav ul {
     list-style: none;
     display: flex;
-    gap: var(--spacing-lg);
+    gap: var(--spacing-md);
+    margin: 0;
 }
 
 header nav a {
     text-decoration: none;
-    color: var(--color-text-light);
+    color: var(--color-text);
     font-weight: var(--font-weight-medium);
-    transition: color var(--transition-fast);
+    transition: all var(--transition-fast);
+    padding: 8px 16px;
+    border-radius: 8px;
+    white-space: nowrap;
 }
 
 header nav a:hover,
 header nav a.active {
     color: var(--color-primary);
+    background: rgba(0, 123, 255, 0.1);
 }
 
 /* Main Content */
-main {
-    min-height: var(--main-height);
-    max-height: var(--main-height);
-    padding: var(--spacing-lg) 0;
-    overflow-y: auto;
+main.container {
+    min-height: calc(100vh - var(--footer-height));
+    padding: 120px var(--container-padding) var(--spacing-lg)
+        var(--container-padding);
     flex-direction: column;
+    margin-top: 0;
 }
 
 article {
@@ -172,8 +193,24 @@ footer {
         padding: 0 var(--container-padding-mobile);
     }
 
+    header.container {
+        top: 15px;
+        left: 4vw;
+        right: 4vw;
+        padding: 10px 16px;
+    }
+
     header nav ul {
-        gap: var(--spacing-sm);
+        gap: var(--spacing-xs);
+    }
+
+    header nav a {
+        padding: 6px 12px;
+        font-size: var(--font-size-small);
+    }
+
+    main {
+        padding-top: 80px;
     }
 
     h1 {
