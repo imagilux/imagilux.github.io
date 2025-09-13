@@ -1,2 +1,39 @@
-{{ define "main" }} This will replace the content of the "block" action found in
-the base template. {{ end }}
+{{ define "main" }}
+<section class="homepage-hero" {{ with .Site.Params.homepage.backgroundImage }}style="background-image: url('{{ . }}')"{{ end }}>
+  <section class="hero-content">
+    <h1 class="hero-title">{{ .Site.Title }}</h1>
+    {{ with .Site.Params.homepage.subtitle }}
+    <p class="hero-subtitle">{{ . }}</p>
+    {{ end }}
+  </section>
+</section>
+
+<section class="latest-articles">
+  <section class="articles-container">
+    <h2 class="section-title">Latest Articles</h2>
+    <section class="articles-grid">
+      {{ range first 3 (where .Site.RegularPages "Type" "posts") }}
+      <article class="article-card">
+        <section class="card-content">
+          <h3 class="card-title">
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+          </h3>
+          <section class="card-meta">
+            <time datetime="{{ .Date.Format "2006-01-02" }}">
+              {{ .Date.Format "January 2, 2006" }}
+            </time>
+            {{ with .Params.author }}
+            <span class="card-author">by {{ . }}</span>
+            {{ end }}
+          </section>
+          <section class="card-summary">
+            {{ .Summary | truncate 150 }}
+          </section>
+          <a href="{{ .Permalink }}" class="read-more">Read More →</a>
+        </section>
+      </article>
+      {{ end }}
+    </section>
+  </section>
+</section>
+{{ end }}

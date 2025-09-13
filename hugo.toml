@@ -40,3 +40,7 @@ enableEmoji = true
   name = "Blog"
   pageRef = "posts"
   weight = 10
+
+[params.homepage]
+  subtitle = "Explore our latest insights, stories, and discoveries"
+  # backgroundImage = "/images/hero-bg.jpg"  # Uncomment and set path to use custom background image
