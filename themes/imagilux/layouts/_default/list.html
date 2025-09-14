@@ -1,21 +1,31 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
-
-{{ .Content }}
-
-{{ range .Pages }}
-  <article>
-    <aside>
-        <img src="https://placehold.co/96" alt="Placeholder aside image."/>
-    </aside>
-    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-    <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "January 2, 2006" }}</time>
-    {{ with .Params.author }}
-      <p>By {{ . }}</p>
+<section class="articles-container">
+  <h1 class="section-title">{{ .Title }}</h1>
+  
+  {{ .Content }}
+  
+  <section class="articles-grid">
+    {{ range .Pages }}
+    <article class="article-card">
+      <section class="card-content">
+        <h3 class="card-title">
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </h3>
+        <section class="card-meta">
+          <time datetime="{{ .Date.Format "2006-01-02" }}">
+            {{ .Date.Format "January 2, 2006" }}
+          </time>
+          {{ with .Params.author }}
+          <span class="card-author">by {{ . }}</span>
+          {{ end }}
+        </section>
+        <section class="card-summary">
+          {{ .Summary | truncate 150 }}
+        </section>
+        <a href="{{ .Permalink }}" class="read-more">Read More →</a>
+      </section>
+    </article>
     {{ end }}
-    {{ with .Summary }}
-      <p>{{ . }}</p>
-    {{ end }}
-  </article>
-{{ end }}
+  </section>
+</section>
 {{ end }}
