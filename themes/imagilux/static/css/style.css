@@ -93,7 +93,7 @@ header.container {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     padding: 12px 24px;
     min-height: auto;
-    max-height: auto;
+    max-height: var(--header-height);
     align-items: center;
     width: auto;
     flex-direction: row;
