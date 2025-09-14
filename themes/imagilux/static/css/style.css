@@ -80,7 +80,7 @@ body {
 /* Header */
 header.container {
     position: fixed;
-    top: 20px;
+    top: 2vh;
     left: 2vw;
     right: 2vw;
     transform: none;
