@@ -191,7 +191,7 @@ a:hover {
 footer.container {
     background: var(--color-background-light);
     border-top: 1px solid var(--color-border);
-    min-height: var(--footer-height);
+    height: var(--footer-height);
     align-items: center;
     justify-content: center;
     text-align: center;
