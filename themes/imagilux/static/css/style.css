@@ -192,12 +192,17 @@ footer.container {
     background: var(--color-background-light);
     border-top: 1px solid var(--color-border);
     height: var(--footer-height);
+    display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    justify-content: flex-end;
+    text-align: right;
     color: var(--color-text-muted);
-    margin-top: auto;
     flex-shrink: 0;
+    padding-right: var(--spacing-md);
+}
+
+footer.container p {
+    margin: 0;
 }
 
 /* Homepage Styles */
