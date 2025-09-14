@@ -105,5 +105,5 @@ As a final word, I would say that I wasn’t kine to recommend Talos as for the 
 
 > "God gives to honesty, loyalty, and righteousness an accent that can neither be counterfeited nor misunderstood."
 
-===
+***
 Original posting was made on [substack](https://substack.com/@k0bayashi/p-151417335)

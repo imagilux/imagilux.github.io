@@ -79,5 +79,5 @@ She perfectly endorsed her legacy and decided to assume her last name, she then 
 
 With two Night Shyamalan creators to enchant us, what could go wrong?
 
-===
+***
 Original posting was made on [substack](https://substack.com/@k0bayashi/p-153885744)

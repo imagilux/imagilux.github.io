@@ -54,5 +54,5 @@ It would no longer be impossible for me to make it real! Today, it would require
 
 Maybe, just maybe, tomorrow it would take me only weeks or months by myself.
 
-===
+***
 Original posting was made on [substack](https://substack.com/@k0bayashi/p-151246075)

@@ -270,5 +270,5 @@ For the less wealthy, host yourself at home or unite through communities and bui
 
 For all of us, it’s time to take back control of our data.
 
-===
+***
 Original posting was made on [substack](https://substack.com/home/post/p-154150511)

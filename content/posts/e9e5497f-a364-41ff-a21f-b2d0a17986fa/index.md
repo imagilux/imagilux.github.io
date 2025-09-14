@@ -51,5 +51,5 @@ Especially today where Claude 4.1 Opus is probably better than anyone of us abou
 
 I've tell it before, dumb processes are killing your companies.
 
-===
+***
 Original posting was made on [substack](https://substack.com/@k0bayashi/p-158224329)
