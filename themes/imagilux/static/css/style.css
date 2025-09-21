@@ -33,13 +33,14 @@
     --spacing-xl: 3rem;
 
     /* Layout */
+    --default-height: 100vh;
     --header-height: 5vh;
+    --main-height: 95vh;
     --floating-header-height: 60px;
-    --floating-header-margin: 20px;
-    --main-height: 90vh;
+    --floating-header-margin: 10vw;
     --footer-height: 5vh;
     --container-width: 100vw;
-    --container-padding: 20px;
+    /*--container-padding: 20px;*/
     --container-padding-mobile: 15px;
 
     /* Transitions */
@@ -211,7 +212,7 @@ footer.container p {
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     background-size: cover;
     background-position: center;
-    min-height: 100vh;
+    min-height: var(--main-height);
     display: flex;
     align-items: center;
     justify-content: center;
