@@ -118,10 +118,30 @@ header nav a {
     white-space: nowrap;
 }
 
-header nav a:hover,
 header nav a.active {
     color: var(--color-primary);
     background: rgba(0, 123, 255, 0.1);
+    text-decoration: none;
+}
+
+/* When hovering over nav, disable all active states except the hovered item */
+header nav:hover a.active {
+    color: var(--color-text);
+    background: transparent;
+}
+
+/* Show hover effect only on the actually hovered item */
+header nav a:hover {
+    color: var(--color-primary);
+    background: rgba(0, 123, 255, 0.1);
+    text-decoration: none;
+}
+
+/* Keep active styling when hovering over the active item itself */
+header nav a.active:hover {
+    color: var(--color-primary);
+    background: rgba(0, 123, 255, 0.1);
+    text-decoration: none;
 }
 
 /* Main Content */
