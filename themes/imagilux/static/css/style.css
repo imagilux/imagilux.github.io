@@ -108,6 +108,26 @@ header nav ul {
     display: flex;
     gap: var(--spacing-md);
     margin: 0;
+    position: relative;
+}
+
+/* Sliding background indicator */
+header nav ul::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: rgba(0, 123, 255, 0.1);
+    border-radius: 8px;
+    transition:
+        transform var(--transition-nav),
+        width var(--transition-nav),
+        opacity var(--transition-nav);
+    opacity: 0;
+    z-index: 0;
+    pointer-events: none;
 }
 
 header nav a {
@@ -130,12 +150,30 @@ header nav a.active {
     z-index: 1;
 }
 
-/* Simple, natural hover effects on individual items */
+/* Show sliding indicator when hovering navigation */
+header nav:hover ul::before {
+    opacity: 1;
+}
+
+/* Position and size indicator based on hovered item */
+header nav ul:has(li:first-child:hover)::before {
+    transform: translateX(0);
+    width: 4rem; /* Approximate width for "Home" */
+}
+
+header nav ul:has(li:nth-child(2):hover)::before {
+    transform: translateX(calc(4rem + var(--spacing-md)));
+    width: 4rem; /* Approximate width for "Blog" */
+}
+
+/* Style for hovered items - remove individual backgrounds to avoid conflicts */
 header nav a:hover {
     color: var(--color-primary);
-    background: rgba(0, 123, 255, 0.1);
+    background: transparent;
     text-decoration: none;
     transform: translateY(-1px);
+    position: relative;
+    z-index: 1;
 }
 
 /* Main Content */
