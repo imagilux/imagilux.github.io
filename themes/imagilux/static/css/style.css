@@ -122,7 +122,6 @@ header nav a.active {
     color: var(--color-primary);
     background: rgba(0, 123, 255, 0.1);
     text-decoration: none;
-<<<<<<< HEAD
 }
 
 /* When hovering over nav, disable all active states except the hovered item */
@@ -143,8 +142,6 @@ header nav a.active:hover {
     color: var(--color-primary);
     background: rgba(0, 123, 255, 0.1);
     text-decoration: none;
-=======
->>>>>>> origin/main
 }
 
 /* Main Content */
