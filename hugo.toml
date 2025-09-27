@@ -43,4 +43,4 @@ enableEmoji = true
 
 [params.homepage]
   subtitle = "Explore our latest insights, stories, and discoveries"
-  # backgroundImage = "/images/hero-bg.jpg"  # Uncomment and set path to use custom background image
+  backgroundImage = "/assets/images/2282bf1d-1088-417a-a357-e97e843c3173.jpg"  # Uncomment and set path to use custom background image
