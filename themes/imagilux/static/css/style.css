@@ -45,6 +45,8 @@
 
     /* Transitions */
     --transition-fast: 0.2s;
+    --transition-smooth: 0.3s ease-out;
+    --transition-nav: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
@@ -112,7 +114,10 @@ header nav a {
     text-decoration: none;
     color: var(--color-text);
     font-weight: var(--font-weight-medium);
-    transition: all var(--transition-fast);
+    transition:
+        color var(--transition-nav),
+        background-color var(--transition-nav),
+        transform var(--transition-nav);
     padding: 8px 16px;
     border-radius: 8px;
     white-space: nowrap;
@@ -120,28 +125,17 @@ header nav a {
 
 header nav a.active {
     color: var(--color-primary);
-    background: rgba(0, 123, 255, 0.1);
     text-decoration: none;
+    position: relative;
+    z-index: 1;
 }
 
-/* When hovering over nav, disable all active states except the hovered item */
-header nav:hover a.active {
-    color: var(--color-text);
-    background: transparent;
-}
-
-/* Show hover effect only on the actually hovered item */
+/* Simple, natural hover effects on individual items */
 header nav a:hover {
     color: var(--color-primary);
     background: rgba(0, 123, 255, 0.1);
     text-decoration: none;
-}
-
-/* Keep active styling when hovering over the active item itself */
-header nav a.active:hover {
-    color: var(--color-primary);
-    background: rgba(0, 123, 255, 0.1);
-    text-decoration: none;
+    transform: translateY(-1px);
 }
 
 /* Main Content */
