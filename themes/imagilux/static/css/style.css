@@ -103,12 +103,39 @@ header.container {
     justify-content: flex-start;
 }
 
+header nav {
+    width: 100%;
+}
+
 header nav ul {
     list-style: none;
     display: flex;
-    gap: var(--spacing-md);
+    align-items: center;
     margin: 0;
     position: relative;
+    width: 100%;
+}
+
+/* Add spacing between regular menu items */
+header nav ul li:not(:last-child) {
+    margin-right: var(--spacing-md);
+}
+
+/* Push the last li element to the right */
+header nav ul li:last-child {
+    margin-left: auto;
+}
+
+/* Language icon styling */
+header nav ul li:last-child i {
+    font-size: 1.2em;
+    cursor: pointer;
+    color: var(--color-text);
+    transition: color var(--transition-nav);
+}
+
+header nav ul li:last-child i:hover {
+    color: var(--color-primary);
 }
 
 /* Sliding background indicator */
