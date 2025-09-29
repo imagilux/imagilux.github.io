@@ -191,12 +191,12 @@ header nav:hover ul::before {
 /* Position and size indicator based on hovered item */
 header nav ul:has(li:first-child:hover)::before {
     transform: translateX(0);
-    width: var(--nav-item-width); /* Approximate width for "Home" */
+    width: calc(var(--nav-item-width) - var(--spacing-xs));
 }
 
 header nav ul:has(li:nth-child(2):hover)::before {
     transform: translateX(calc(var(--nav-item-width) + var(--spacing-md)));
-    width: var(--nav-item-width); /* Approximate width for "Blog" */
+    width: calc(var(--nav-item-width) - var(--spacing-xs));
 }
 
 /* Style for hovered items - remove individual backgrounds to avoid conflicts */
