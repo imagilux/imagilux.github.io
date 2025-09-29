@@ -13,7 +13,7 @@
       <article class="article-card">
         <section class="card-content">
           <h3 class="card-title">
-            <a href="{{ .Permalink }}">{{ .Title }}</a>
+            <a href="{{ .Permalink }}">{{ .Title | truncate 40 }}</a>
           </h3>
           <section class="card-meta">
             <time datetime="{{ .Date.Format "2006-01-02" }}">
