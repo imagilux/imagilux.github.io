@@ -36,12 +36,13 @@
     --default-height: 100vh;
     --header-height: 5vh;
     --main-height: 95vh;
-    --floating-header-height: 60px;
+    --floating-header-height: 5vh;
     --floating-header-margin: 10vw;
     --footer-height: 5vh;
     --container-width: 100vw;
     /*--container-padding: 20px;*/
     --container-padding-mobile: 15px;
+    --nav-item-width: 10vw;
 
     /* Transitions */
     --transition-fast: 0.2s;
@@ -185,12 +186,12 @@ header nav:hover ul::before {
 /* Position and size indicator based on hovered item */
 header nav ul:has(li:first-child:hover)::before {
     transform: translateX(0);
-    width: 4rem; /* Approximate width for "Home" */
+    width: var(--nav-item-width); /* Approximate width for "Home" */
 }
 
 header nav ul:has(li:nth-child(2):hover)::before {
-    transform: translateX(calc(4rem + var(--spacing-md)));
-    width: 4rem; /* Approximate width for "Blog" */
+    transform: translateX(calc(var(--nav-item-width) + var(--spacing-md)));
+    width: var(--nav-item-width); /* Approximate width for "Blog" */
 }
 
 /* Style for hovered items - remove individual backgrounds to avoid conflicts */
