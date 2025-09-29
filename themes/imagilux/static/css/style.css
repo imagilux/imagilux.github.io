@@ -119,6 +119,9 @@ header nav ul {
 
 header nav li {
     width: var(--nav-item-width);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Add spacing between regular menu items */
