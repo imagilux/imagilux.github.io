@@ -129,6 +129,7 @@ header nav ul li:not(:last-child) {
 /* Push the last li element to the right */
 header nav ul li:last-child {
     margin-left: auto;
+    width: auto;
 }
 
 /* Language icon styling */
