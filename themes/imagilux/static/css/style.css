@@ -118,10 +118,10 @@ header nav ul {
 }
 
 header nav li {
-    width: var(--nav-item-width);
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 /* Add spacing between regular menu items */
@@ -147,21 +147,18 @@ header nav ul li:last-child i:hover {
     color: var(--color-primary);
 }
 
-/* Sliding background indicator */
-header nav ul::before {
+/* Individual hover background for each nav item */
+header nav li::before {
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
+    left: var(--spacing-xs);
+    right: var(--spacing-xs);
     height: 100%;
-    width: 0;
     background: rgba(0, 123, 255, 0.1);
     border-radius: 8px;
-    transition:
-        transform var(--transition-nav),
-        width var(--transition-nav),
-        opacity var(--transition-nav);
     opacity: 0;
+    transition: opacity var(--transition-nav);
     z-index: 0;
     pointer-events: none;
 }
@@ -186,20 +183,9 @@ header nav a.active {
     z-index: 1;
 }
 
-/* Show sliding indicator when hovering navigation */
-header nav:hover ul::before {
+/* Activate hover background on individual nav items */
+header nav li:hover::before {
     opacity: 1;
-}
-
-/* Position and size indicator based on hovered item */
-header nav ul:has(li:first-child:hover)::before {
-    transform: translateX(0);
-    width: calc(var(--nav-item-width) - var(--spacing-xs));
-}
-
-header nav ul:has(li:nth-child(2):hover)::before {
-    transform: translateX(calc(var(--nav-item-width) + var(--spacing-md)));
-    width: calc(var(--nav-item-width) - var(--spacing-xs));
 }
 
 /* Style for hovered items - remove individual backgrounds to avoid conflicts */
@@ -207,7 +193,6 @@ header nav a:hover {
     color: var(--color-primary);
     background: transparent;
     text-decoration: none;
-    transform: translateY(-1px);
     position: relative;
     z-index: 1;
 }
