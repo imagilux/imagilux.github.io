@@ -1,0 +1,17 @@
+{{ define "main" }}
+{{ partial "site-header.html" . }}
+<main class="imx-page">
+  <article class="imx-page__inner">
+    <header class="imx-page__header">
+      {{ with .Params.eyebrow }}<div class="imx-eyebrow imx-eyebrow--{{ $.Params.eyebrowTone | default "marine" }}">{{ . }}</div>{{ end }}
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.lede }}<p class="imx-page__lede">{{ . | markdownify }}</p>{{ end }}
+    </header>
+    <div class="imx-prose">
+      {{ .Content }}
+    </div>
+    {{ with .Params.lastUpdated }}<p class="imx-page__meta">Last updated: {{ . }}</p>{{ end }}
+  </article>
+</main>
+{{ partial "site-footer.html" . }}
+{{ end }}

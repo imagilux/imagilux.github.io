@@ -72,9 +72,11 @@ title = "Learn"
 [[menus.columns.items]]
 label = "Blog"
 body = "Stories from the Light Out era."
+href = "https://www.imagilux.org/blog/"
 [[menus.columns.items]]
 label = "Docs"
 body = "Guides, references, and tutorials."
+href = "https://umf.imagilux.org/"
 
 [[menus]]
 label = "Company"
@@ -84,6 +86,7 @@ title = "Imagilux"
 [[menus.columns.items]]
 label = "About"
 body = "Imagination beyond knowledge."
+href = "/about/"
 [[menus.columns.items]]
 label = "Careers"
 body = "Join us. We're hiring."
@@ -93,3 +96,4 @@ body = "News, brand, and assets."
 [[menus.columns.items]]
 label = "Contact"
 body = "Talk to a specialist."
+href = "/contact/"

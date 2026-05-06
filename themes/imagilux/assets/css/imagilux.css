@@ -1030,3 +1030,44 @@ a:hover, a:hover u { text-decoration: none; }
 .imx-nav--light:has(.imx-navmenu-wrap[data-menu="Company"]:hover)   .imx-nav__item[data-menu="Company"]   :is(.imx-navlink, .imx-navlink__caret) {
   color: var(--imx-bright-marine);
 }
+
+/* ============================================================
+ * Static pages — generic layout used by _default/single.html for
+ * About / Contact / Privacy / Terms / Security and similar prose
+ * pages. Constrained reading width, kit-consistent typography.
+ * ============================================================ */
+
+.imx-page { background: var(--imx-white-smoke); color: var(--imx-ink-black); padding: 80px 0 96px; min-height: 60vh; }
+.imx-page__inner { max-width: 720px; margin: 0 auto; padding: 0 32px; }
+.imx-page__header { margin-bottom: 48px; }
+.imx-page__header h1 { font-family: var(--font-display); font-weight: 800; font-size: var(--fs-4xl); letter-spacing: -0.025em; line-height: 1.05; margin: 12px 0 16px; }
+.imx-page__lede { font-size: var(--fs-md); line-height: 1.5; color: var(--fg-muted); max-width: 60ch; }
+.imx-page__meta { margin-top: 64px; font-size: var(--fs-sm); color: var(--fg-subtle); }
+
+.imx-prose { font-size: var(--fs-base); line-height: 1.6; }
+.imx-prose h2 { font-family: var(--font-display); font-weight: 700; font-size: var(--fs-2xl); letter-spacing: -0.015em; margin: 56px 0 16px; }
+.imx-prose h3 { font-family: var(--font-display); font-weight: 600; font-size: var(--fs-lg); margin: 32px 0 12px; }
+.imx-prose p { margin: 0 0 16px; }
+.imx-prose ul, .imx-prose ol { margin: 0 0 16px; padding-left: 24px; }
+.imx-prose li { margin-bottom: 6px; }
+.imx-prose li > p:last-child { margin-bottom: 0; }
+.imx-prose a { color: var(--imx-bright-marine); text-decoration: underline; text-underline-offset: 2px; }
+.imx-prose a:hover { text-decoration: none; }
+.imx-prose strong { font-weight: 600; }
+.imx-prose code { font-family: var(--font-mono); font-size: 0.9em; background: rgba(17, 21, 28, 0.06); padding: 2px 6px; border-radius: 4px; }
+.imx-prose blockquote { border-left: 3px solid var(--imx-bright-marine); padding: 4px 0 4px 20px; margin: 24px 0; color: var(--fg-muted); font-style: italic; }
+.imx-prose hr { border: 0; border-top: 1px solid var(--border); margin: 48px 0; }
+
+/* Contact form (lifted from kit's DemoModal styles, scoped to a page-level
+ * container so it doesn't depend on the modal panel chrome). */
+.imx-contact-form { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px 14px; margin-top: 32px; }
+.imx-contact-form .imx-field { display: flex; flex-direction: column; gap: 6px; }
+.imx-contact-form .imx-field--full { grid-column: 1 / -1; }
+.imx-contact-form label { font-size: var(--fs-xs); font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--fg-muted); }
+.imx-contact-form input,
+.imx-contact-form select,
+.imx-contact-form textarea { font-family: var(--font-body); font-size: var(--fs-sm); padding: 10px 12px; border: 1px solid var(--border-strong); border-radius: 6px; background: var(--imx-neutral-0); color: var(--fg); }
+.imx-contact-form textarea { resize: vertical; min-height: 88px; }
+.imx-contact-form input:focus,
+.imx-contact-form select:focus,
+.imx-contact-form textarea:focus { outline: 2px solid var(--imx-bright-marine); outline-offset: 1px; border-color: transparent; }

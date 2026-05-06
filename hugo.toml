@@ -10,6 +10,12 @@ disableKinds = ["taxonomy", "term", "RSS"]
 [params]
 description = "Imagilux delivers autonomous solutions to deploy, manage and evolve your datacenters at scale — without manual intervention."
 
+# Allow raw HTML (forms, embedded SVG, etc.) inside Markdown content.
+# Trusted-author site — content is hand-edited by the team, not user-submitted,
+# so the XSS risk goldmark's escape default guards against doesn't apply here.
+[markup.goldmark.renderer]
+unsafe = true
+
 [minify]
 disableHTML = false
 disableCSS = false
