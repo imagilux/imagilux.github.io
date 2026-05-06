@@ -11,15 +11,15 @@ title = "Why Imagilux"
 [[menus.columns.items]]
 label = "The Light Out era"
 body = "Self-operating infrastructure, end-to-end."
-href = "/platform/#light-out"
+href = "/platform/light-out/"
 [[menus.columns.items]]
 label = "Open by design"
 body = "Vendor-neutral specs, first-party SDKs."
-href = "/platform/#open-by-design"
+href = "/platform/open-by-design/"
 [[menus.columns.items]]
 label = "Trust model"
 body = "Signed images, verifiable provenance."
-href = "/platform/#trust-model"
+href = "/platform/trust-model/"
 [[menus.columns]]
 title = "Architecture"
 [[menus.columns.items]]
@@ -33,7 +33,7 @@ href = "/products/boreal/"
 [[menus.columns.items]]
 label = "Imagilux SDK"
 body = "Build operators in 8 languages."
-href = "/platform/#sdk"
+href = "/platform/sdk/"
 
 [[menus]]
 label = "Products"
