@@ -1,0 +1,7 @@
+{{ define "main" }}
+<div class="imx-pdp">
+  {{ partial "site-header.html" . }}
+  {{ partial (printf "product-detail/%s.html" .File.BaseFileName) . }}
+  {{ partial "site-footer.html" . }}
+</div>
+{{ end }}

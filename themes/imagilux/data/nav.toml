@@ -37,9 +37,11 @@ title = "Products"
 [[menus.columns.items]]
 label = "UMF"
 body = "Universal Machine Format."
+href = "/products/umf/"
 [[menus.columns.items]]
 label = "BOREAL"
 body = "Autonomous infrastructure."
+href = "/products/boreal/"
 [[menus.columns.items]]
 label = "Pricing"
 body = "Plans for every fleet size."

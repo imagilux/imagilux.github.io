@@ -1,6 +1,6 @@
 <header class="imx-nav imx-nav--dark">
   <div class="imx-container imx-nav__inner">
-    <a class="imx-nav__logo" href="#" aria-label="Imagilux home">
+    <a class="imx-nav__logo" href="/" aria-label="Imagilux home">
       <img src="/images/logoDark.svg" alt="Imagilux" height="22">
     </a>
     <nav class="imx-nav__links">
@@ -26,7 +26,7 @@
           <ul class="imx-navmenu__list">
             {{- range .items }}
             <li>
-              <a href="#">
+              <a href="{{ .href | default "#" }}">
                 <span class="imx-navmenu__label">{{ .label }}</span>
                 <span class="imx-navmenu__body">{{ .body }}</span>
               </a>
