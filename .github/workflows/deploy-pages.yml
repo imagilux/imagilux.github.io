@@ -1,0 +1,86 @@
+name: Deploy landing
+
+# Builds the Hugo site and publishes to GitHub Pages on every push to main.
+# main is the publishing branch — each commit ships. Cut a draft to a feature
+# branch if you need to stage changes before they go live.
+#
+# Manual escape hatch: workflow_dispatch lets you re-run a deploy off-schedule
+# (e.g. after a Pages outage, or to republish without a content change).
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+# GITHUB_TOKEN scopes:
+#   contents: read   — checkout
+#   pages:    write  — publish to the github-pages environment
+#   id-token: write  — OIDC for actions/deploy-pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One deploy at a time. Don't cancel an in-progress publish — the artifact is
+# already uploaded and aborting mid-flight can leave Pages in a partial state.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      # Pinned. Bump deliberately when a Hugo release is needed — floating
+      # versions risk silent template breakage on minor upgrades.
+      HUGO_VERSION: 0.128.0
+    steps:
+      - name: Install Hugo CLI
+        run: |
+          wget -O ${{ runner.temp }}/hugo.deb \
+            https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb
+          sudo dpkg -i ${{ runner.temp }}/hugo.deb
+
+      - name: Install Dart Sass
+        run: sudo snap install dart-sass
+
+      - name: Checkout
+        # Pinned to immutable tag — floating major tags were a tj-actions-style
+        # supply-chain attack vector. Bump deliberately on new releases.
+        uses: actions/checkout@v6.0.2
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v6.0.0
+
+      - name: Build with Hugo
+        env:
+          HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
+          HUGO_ENVIRONMENT: production
+        run: |
+          hugo \
+            --minify \
+            --baseURL "${{ steps.pages.outputs.base_url }}/"
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v5.0.0
+        with:
+          path: ./public
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5.0.0

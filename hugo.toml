@@ -1,0 +1,22 @@
+baseURL = "https://www.imagilux.org/"
+languageCode = "en-us"
+title = "Imagilux — Autonomous I.T Infrastructure Management"
+theme = "imagilux"
+
+# Drops Hugo's default RSS / robots / sitemap outputs since the landing page
+# is a single document. Re-enable selectively when content sections are added.
+disableKinds = ["taxonomy", "term", "RSS"]
+
+[params]
+description = "Imagilux delivers autonomous solutions to deploy, manage and evolve your datacenters at scale — without manual intervention."
+
+[minify]
+disableHTML = false
+disableCSS = false
+disableJS = false
+disableJSON = false
+disableSVG = false
+disableXML = false
+
+[build]
+writeStats = false
