@@ -3,6 +3,12 @@
  * design system changes, re-run tools/unpacker.py + tools/prerender.py.
  */
 
+/* Reset: the kit was originally rendered under this global reset (it lived
+ * in ids.html's bundler-loader CSS, not the kit blocks themselves). Without
+ * it the UA 8px body margin and content-box sizing leak through. */
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; }
+
 /* ============================================================
    IMAGILUX • Colors & Type
    ------------------------------------------------------------
