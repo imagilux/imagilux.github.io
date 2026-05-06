@@ -4,7 +4,7 @@ slug: "{{ .Name }}"
 description: "TODO: one-sentence description used as the meta description and as a fallback for the hero lede."
 
 # PDP shape — see themes/imagilux/layouts/partials/pdp/page.html for contract.
-accent: "marine"  # "amber" or "marine"
+accent: "amber"   # Platform pages default to amber; marine is reserved for BOREAL.
 
 hero:
   eyebrow: "TODO: small uppercase tag above the h1 (e.g. 'Why Imagilux', 'Architecture')"

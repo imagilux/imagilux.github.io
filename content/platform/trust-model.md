@@ -4,7 +4,7 @@ slug: trust-model
 description: Every UMF artifact carries cryptographic provenance end-to-end. Compliance posture becomes
   a property of the system — true because the artifacts are signed and reproducible, not because someone
   filled out a checklist.
-accent: marine
+accent: amber
 hero:
   eyebrow: Why Imagilux
   lede: Every UMF artifact carries cryptographic provenance end-to-end. Compliance posture becomes a property

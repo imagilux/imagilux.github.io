@@ -3,7 +3,7 @@ title: Imagilux SDK
 slug: sdk
 description: First-party SDKs for UMF and BOREAL in eight languages. Build custom directives, write operators,
   and integrate Imagilux into existing tooling without reverse-engineering the wire formats.
-accent: marine
+accent: amber
 hero:
   eyebrow: Architecture
   lede: First-party SDKs for UMF and BOREAL in eight languages. Build custom directives, write operators,
