@@ -950,6 +950,23 @@ a:hover, a:hover u { text-decoration: none; }
  * Each .imx-nav__item carries data-menu="X"; the matching .imx-navmenu-wrap
  * (sibling of .imx-nav__inner inside <header>) opens when either is hovered.
  * ============================================================ */
+
+/* Hover bridge: .imx-nav__inner has 18px of bottom padding, so a cursor
+ * moving from the nav item down to the panel crosses a gap where neither
+ * :hover applies. The ::after pseudo keeps the item hovered through the
+ * gap AND well into the panel's top region, giving panel:hover time to
+ * take over the rule before the bridge stops firing — Firefox evaluates
+ * :has() deactivation before :hover activation otherwise, leaving a
+ * 1-frame pointer-events:none that breaks the handoff. The pseudo only
+ * needs to reach panel content, which starts 32px below panel.top
+ * (.imx-navmenu__inner padding); 48px is comfortably inside that. */
+.imx-nav__item::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; top: 100%;
+  height: 48px;
+}
+
 .imx-nav:has(.imx-nav__item[data-menu="Platform"]:hover)  .imx-navmenu-wrap[data-menu="Platform"],
 .imx-nav:has(.imx-nav__item[data-menu="Products"]:hover)  .imx-navmenu-wrap[data-menu="Products"],
 .imx-nav:has(.imx-nav__item[data-menu="Solutions"]:hover) .imx-navmenu-wrap[data-menu="Solutions"],
