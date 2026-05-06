@@ -1,1 +1,42 @@
-<header class="imx-nav imx-nav--dark "><div class="imx-container imx-nav__inner"><a class="imx-nav__logo" href="#" aria-label="Imagilux home"><img src="/images/logoDark.svg" alt="Imagilux" height="22"></a><nav class="imx-nav__links"><div class="imx-nav__item"><button type="button" class="imx-navlink " aria-expanded="false">Platform<span class="imx-navlink__caret">⌄</span></button></div><div class="imx-nav__item"><button type="button" class="imx-navlink " aria-expanded="false">Products<span class="imx-navlink__caret">⌄</span></button></div><div class="imx-nav__item"><button type="button" class="imx-navlink " aria-expanded="false">Solutions<span class="imx-navlink__caret">⌄</span></button></div><div class="imx-nav__item"><button type="button" class="imx-navlink " aria-expanded="false">Resources<span class="imx-navlink__caret">⌄</span></button></div><div class="imx-nav__item"><button type="button" class="imx-navlink " aria-expanded="false">Company<span class="imx-navlink__caret">⌄</span></button></div></nav><div class="imx-nav__spacer"></div><button class="imx-btn imx-btn--primary">Get Started <span class="imx-arr">→</span></button></div></header>
+<header class="imx-nav imx-nav--dark">
+  <div class="imx-container imx-nav__inner">
+    <a class="imx-nav__logo" href="#" aria-label="Imagilux home">
+      <img src="/images/logoDark.svg" alt="Imagilux" height="22">
+    </a>
+    <nav class="imx-nav__links">
+      {{- range site.Data.nav.menus }}
+      <div class="imx-nav__item" data-menu="{{ .label }}">
+        <button type="button" class="imx-navlink" aria-expanded="false" aria-haspopup="menu">
+          {{ .label }}<span class="imx-navlink__caret">⌄</span>
+        </button>
+      </div>
+      {{- end }}
+    </nav>
+    <div class="imx-nav__spacer"></div>
+    <button class="imx-btn imx-btn--primary">Get Started <span class="imx-arr">→</span></button>
+  </div>
+
+  {{- range site.Data.nav.menus }}
+  <div class="imx-navmenu-wrap" data-menu="{{ .label }}">
+    <div class="imx-navmenu" role="menu" aria-label="{{ .label }}">
+      <div class="imx-navmenu__inner imx-navmenu--{{ .layout }}">
+        {{- range .columns }}
+        <div class="imx-navmenu__col">
+          <div class="imx-navmenu__title">{{ .title }}</div>
+          <ul class="imx-navmenu__list">
+            {{- range .items }}
+            <li>
+              <a href="#">
+                <span class="imx-navmenu__label">{{ .label }}</span>
+                <span class="imx-navmenu__body">{{ .body }}</span>
+              </a>
+            </li>
+            {{- end }}
+          </ul>
+        </div>
+        {{- end }}
+      </div>
+    </div>
+  </div>
+  {{- end }}
+</header>

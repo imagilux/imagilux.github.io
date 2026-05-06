@@ -944,3 +944,19 @@ a:hover, a:hover u { text-decoration: none; }
 .imx-switcher { position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%); background: var(--imx-ink-black); color: var(--imx-white-smoke); border-radius: 9999px; display: flex; gap: 4px; padding: 4px; z-index: 40; box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
 .imx-switcher button { background: transparent; border: 0; color: inherit; font-family: var(--font-body); font-size: 12px; font-weight: 500; padding: 8px 14px; border-radius: 9999px; cursor: pointer; opacity: 0.7; }
 .imx-switcher button.active { background: var(--imx-bright-amber); color: var(--imx-ink-black); opacity: 1; font-weight: 600; }
+
+/* ============================================================
+ * Hover-driven dropdown (CSS-only mirror of the kit's React state machine).
+ * Each .imx-nav__item carries data-menu="X"; the matching .imx-navmenu-wrap
+ * (sibling of .imx-nav__inner inside <header>) opens when either is hovered.
+ * ============================================================ */
+.imx-nav:has(.imx-nav__item[data-menu="Platform"]:hover)  .imx-navmenu-wrap[data-menu="Platform"],
+.imx-nav:has(.imx-nav__item[data-menu="Products"]:hover)  .imx-navmenu-wrap[data-menu="Products"],
+.imx-nav:has(.imx-nav__item[data-menu="Solutions"]:hover) .imx-navmenu-wrap[data-menu="Solutions"],
+.imx-nav:has(.imx-nav__item[data-menu="Resources"]:hover) .imx-navmenu-wrap[data-menu="Resources"],
+.imx-nav:has(.imx-nav__item[data-menu="Company"]:hover)   .imx-navmenu-wrap[data-menu="Company"],
+.imx-navmenu-wrap:hover {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}

@@ -1,0 +1,93 @@
+# Top-nav megamenu structure. Mirrors NAV_MENUS in the kit's Nav component
+# (ids.html → bundler asset c94b44ee). Layout values match the CSS modifier:
+#   "list"    → single 360px column (.imx-navmenu--list)
+#   "feature" → two equal columns   (.imx-navmenu--feature)
+
+[[menus]]
+label = "Platform"
+layout = "feature"
+[[menus.columns]]
+title = "Why Imagilux"
+[[menus.columns.items]]
+label = "The Light Out era"
+body = "Self-operating infrastructure, end-to-end."
+[[menus.columns.items]]
+label = "Open by design"
+body = "Vendor-neutral specs, first-party SDKs."
+[[menus.columns.items]]
+label = "Trust model"
+body = "Signed images, verifiable provenance."
+[[menus.columns]]
+title = "Architecture"
+[[menus.columns.items]]
+label = "Universal Machine Format"
+body = "The portable image specification."
+[[menus.columns.items]]
+label = "Boreal control plane"
+body = "Autonomous lifecycle for every fleet."
+[[menus.columns.items]]
+label = "Imagilux SDK"
+body = "Build operators in 8 languages."
+
+[[menus]]
+label = "Products"
+layout = "list"
+[[menus.columns]]
+title = "Products"
+[[menus.columns.items]]
+label = "UMF"
+body = "Universal Machine Format."
+[[menus.columns.items]]
+label = "BOREAL"
+body = "Autonomous infrastructure."
+[[menus.columns.items]]
+label = "Pricing"
+body = "Plans for every fleet size."
+
+[[menus]]
+label = "Solutions"
+layout = "list"
+[[menus.columns]]
+title = "By industry"
+[[menus.columns.items]]
+label = "Datacenters"
+body = "Hyperscale, ready out of the box."
+[[menus.columns.items]]
+label = "Edge"
+body = "Constrained topologies, full control."
+[[menus.columns.items]]
+label = "Hybrid Cloud"
+body = "Span clouds without re-architecting."
+[[menus.columns.items]]
+label = "Government"
+body = "Air-gapped, FedRAMP-ready."
+
+[[menus]]
+label = "Resources"
+layout = "list"
+[[menus.columns]]
+title = "Learn"
+[[menus.columns.items]]
+label = "Blog"
+body = "Stories from the Light Out era."
+[[menus.columns.items]]
+label = "Docs"
+body = "Guides, references, and tutorials."
+
+[[menus]]
+label = "Company"
+layout = "list"
+[[menus.columns]]
+title = "Imagilux"
+[[menus.columns.items]]
+label = "About"
+body = "Imagination beyond knowledge."
+[[menus.columns.items]]
+label = "Careers"
+body = "Join us. We're hiring."
+[[menus.columns.items]]
+label = "Press"
+body = "News, brand, and assets."
+[[menus.columns.items]]
+label = "Contact"
+body = "Talk to a specialist."
