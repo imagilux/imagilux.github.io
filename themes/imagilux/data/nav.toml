@@ -11,23 +11,29 @@ title = "Why Imagilux"
 [[menus.columns.items]]
 label = "The Light Out era"
 body = "Self-operating infrastructure, end-to-end."
+href = "/platform/#light-out"
 [[menus.columns.items]]
 label = "Open by design"
 body = "Vendor-neutral specs, first-party SDKs."
+href = "/platform/#open-by-design"
 [[menus.columns.items]]
 label = "Trust model"
 body = "Signed images, verifiable provenance."
+href = "/platform/#trust-model"
 [[menus.columns]]
 title = "Architecture"
 [[menus.columns.items]]
 label = "Universal Machine Format"
 body = "The portable image specification."
+href = "/products/umf/"
 [[menus.columns.items]]
 label = "Boreal control plane"
 body = "Autonomous lifecycle for every fleet."
+href = "/products/boreal/"
 [[menus.columns.items]]
 label = "Imagilux SDK"
 body = "Build operators in 8 languages."
+href = "/platform/#sdk"
 
 [[menus]]
 label = "Products"
@@ -45,6 +51,7 @@ href = "/products/boreal/"
 [[menus.columns.items]]
 label = "Pricing"
 body = "Plans for every fleet size."
+href = "/pricing/"
 
 [[menus]]
 label = "Solutions"
@@ -54,15 +61,19 @@ title = "By industry"
 [[menus.columns.items]]
 label = "Datacenters"
 body = "Hyperscale, ready out of the box."
+href = "/solutions/#datacenters"
 [[menus.columns.items]]
 label = "Edge"
 body = "Constrained topologies, full control."
+href = "/solutions/#edge"
 [[menus.columns.items]]
 label = "Hybrid Cloud"
 body = "Span clouds without re-architecting."
+href = "/solutions/#hybrid-cloud"
 [[menus.columns.items]]
 label = "Government"
 body = "Air-gapped, FedRAMP-ready."
+href = "/solutions/#government"
 
 [[menus]]
 label = "Resources"
@@ -90,9 +101,11 @@ href = "/about/"
 [[menus.columns.items]]
 label = "Careers"
 body = "Join us. We're hiring."
+href = "/careers/"
 [[menus.columns.items]]
 label = "Press"
 body = "News, brand, and assets."
+href = "/press/"
 [[menus.columns.items]]
 label = "Contact"
 body = "Talk to a specialist."

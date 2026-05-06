@@ -4,7 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=1280">
   <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} — {{ site.Title }}{{ end }}</title>
-  {{ with site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+  {{ with .Params.description | default site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+  {{ if .Params.legalDraft }}<meta name="robots" content="noindex, nofollow">{{ end }}
 
   {{ $css := resources.Get "css/imagilux.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">

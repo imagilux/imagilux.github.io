@@ -5,6 +5,7 @@ eyebrowTone: "amber"
 lede: "How we protect customer data and infrastructure, and how to report security issues to us responsibly."
 description: "Imagilux security posture and vulnerability disclosure policy."
 lastUpdated: "2026-05-06"
+legalDraft: true
 ---
 
 <!-- DRAFT — fill in concrete program details before publishing. The
@@ -13,7 +14,7 @@ lastUpdated: "2026-05-06"
 
 ## Reporting a vulnerability
 
-We welcome reports from security researchers and the broader community. Please report issues to **[FILL IN: security@<domain>]** before disclosing publicly. If you require encrypted communication, our PGP key is available at **[FILL IN: keyserver URL or fingerprint]**.
+We welcome reports from security researchers and the broader community. Please report issues to <security@imagilux.org> before disclosing publicly. If you require encrypted communication, our PGP key is available at **[FILL IN: keyserver URL or fingerprint]**.
 
 We aim to:
 

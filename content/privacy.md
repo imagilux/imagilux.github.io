@@ -4,6 +4,7 @@ eyebrow: "Legal"
 lede: "How Imagilux collects, uses, and protects information about visitors to this site and customers of our products."
 description: "Imagilux Privacy Policy."
 lastUpdated: "2026-05-06"
+legalDraft: true
 ---
 
 <!-- DRAFT — this scaffolding outlines the standard sections expected of a
@@ -59,4 +60,4 @@ We will update this page when material changes occur. The "Last updated" date ab
 
 ## Contact
 
-Privacy questions: [contact us](/contact/) or email **[FILL IN: privacy@<domain>]**.
+Privacy questions: [contact us](/contact/) or email <contact@imagilux.org>.

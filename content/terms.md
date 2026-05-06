@@ -4,6 +4,7 @@ eyebrow: "Legal"
 lede: "The terms governing your use of the Imagilux website and products."
 description: "Imagilux Terms of Service."
 lastUpdated: "2026-05-06"
+legalDraft: true
 ---
 
 <!-- DRAFT — sectional scaffolding only. Replace each section with text
@@ -52,4 +53,4 @@ We may update these terms when material changes occur. Continued use of the serv
 
 ## Contact
 
-Questions about these terms: [contact us](/contact/) or email **[FILL IN: legal@<domain>]**.
+Questions about these terms: [contact us](/contact/) or email <contact@imagilux.org>.
