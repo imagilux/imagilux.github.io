@@ -10,12 +10,6 @@ hero:
   lede: Every UMF artifact carries cryptographic provenance end-to-end. Compliance posture becomes a property
     of the system — true because the artifacts are signed and reproducible, not because someone filled
     out a checklist.
-  ctaPrimary:
-    label: Talk to us
-    href: /contact/
-  ctaSecondary:
-    label: Read the security policy
-    href: /security/
 features:
   heading: Trust by construction.
   items:

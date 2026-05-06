@@ -10,12 +10,6 @@ hero:
   lede: 'Operators don''t lack capability — they lack leverage. Light Out is the design stance that closes
     the gap: declarative intent, autonomous convergence, and a system that runs without humans in the
     change-management loop.'
-  ctaPrimary:
-    label: Talk to us
-    href: /contact/
-  ctaSecondary:
-    label: Read the spec
-    href: https://umf.imagilux.org/
 features:
   heading: Built for autonomous fleets.
   items:

@@ -8,12 +8,6 @@ hero:
   eyebrow: Architecture
   lede: First-party SDKs for UMF and BOREAL in eight languages. Build custom directives, write operators,
     and integrate Imagilux into existing tooling without reverse-engineering the wire formats.
-  ctaPrimary:
-    label: Talk to us
-    href: /contact/
-  ctaSecondary:
-    label: Read the docs
-    href: https://umf.imagilux.org/
 features:
   heading: Operator-grade tooling.
   items:

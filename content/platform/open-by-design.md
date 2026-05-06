@@ -10,12 +10,6 @@ hero:
   lede: The substrate underneath an operator's fleet should never be a vendor lock-in. UMF is open. Our
     SDKs are open. Reference implementations are open. What's commercial is hardened distributions, signed
     registries, and the BOREAL control plane — the substrate stays in your hands.
-  ctaPrimary:
-    label: Talk to us
-    href: /contact/
-  ctaSecondary:
-    label: Read the spec
-    href: https://umf.imagilux.org/
 features:
   heading: Open in every layer.
   items:

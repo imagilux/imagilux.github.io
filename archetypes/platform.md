@@ -9,12 +9,9 @@ accent: "amber"   # Platform pages default to amber; marine is reserved for BORE
 hero:
   eyebrow: "TODO: small uppercase tag above the h1 (e.g. 'Why Imagilux', 'Architecture')"
   lede: "TODO: paragraph under the h1."
-  ctaPrimary:
-    label: "Talk to us"
-    href: "/contact/"
-  ctaSecondary:
-    label: "Read the spec"
-    href: "https://umf.imagilux.org/"
+  # Convention: platform pages render no hero CTAs. Add ctaPrimary /
+  # ctaSecondary blocks here only if a specific page needs them; the
+  # PDP template will skip the CTA row when both are absent.
 
 features:
   heading: "TODO: features-section h2"

@@ -11,8 +11,10 @@
     hero:
       eyebrow:                      — small uppercase tag above the h1
       lede:                         — paragraph under the h1
-      ctaPrimary:    {label, href}  — primary button (amber/marine fill)
-      ctaSecondary:  {label, href}  — ghost button on the dark hero
+      ctaPrimary:    {label, href}  — optional primary button (amber/marine fill)
+      ctaSecondary:  {label, href}  — optional ghost button on the dark hero
+                                       Omit both to render a hero with no CTAs
+                                       (current convention: /platform/* pages).
     features:
       heading:                      — h2 above the cards
       items:  [{icon, title, body}] — exactly 6 cards typical;
@@ -38,10 +40,16 @@
     <div class="imx-eyebrow imx-eyebrow--{{ $accent }}">{{ $hero.eyebrow }}</div>
     <h1 class="imx-pdp__title">{{ .Title }}<span class="imx-pdp__chev imx-pcard__chev--{{ $accent }}">›</span></h1>
     <p class="imx-pdp__lede">{{ $hero.lede }}</p>
+    {{- if or $hero.ctaPrimary $hero.ctaSecondary }}
     <div class="imx-hero__ctas">
-      <a class="imx-btn imx-btn--primary" href="{{ $hero.ctaPrimary.href }}">{{ $hero.ctaPrimary.label }} <span class="imx-arr">→</span></a>
-      <a class="imx-btn imx-btn--ghost-on-dark" href="{{ $hero.ctaSecondary.href }}"><u>{{ $hero.ctaSecondary.label }}</u> <span class="imx-arr">→</span></a>
+      {{- with $hero.ctaPrimary }}
+      <a class="imx-btn imx-btn--primary" href="{{ .href }}">{{ .label }} <span class="imx-arr">→</span></a>
+      {{- end }}
+      {{- with $hero.ctaSecondary }}
+      <a class="imx-btn imx-btn--ghost-on-dark" href="{{ .href }}"><u>{{ .label }}</u> <span class="imx-arr">→</span></a>
+      {{- end }}
     </div>
+    {{- end }}
   </div>
 </section>
 
