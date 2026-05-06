@@ -977,3 +977,56 @@ a:hover, a:hover u { text-decoration: none; }
   transform: translateY(0);
   pointer-events: auto;
 }
+
+/* ============================================================
+ * Active-trigger persistence — keep the navlink in its hovered
+ * appearance while the matching dropdown is open, even when the
+ * cursor is no longer on the button. Without this, the trigger
+ * reverts to default the moment the cursor crosses the bridge or
+ * lands on the panel — visually disconnecting the open panel from
+ * the item it belongs to.
+ *
+ * Three "active" cases (any one keeps the trigger styled):
+ *   .imx-nav__item:hover           — button or its bridge ::after
+ *   .imx-nav:has(...)              — matching panel hovered (per menu)
+ *
+ * Per-menu :has() rules are unavoidable: each item must respond
+ * only to its own panel's hover, so the data-menu values must match.
+ * ============================================================ */
+
+.imx-nav__item:hover .imx-navlink,
+.imx-nav:has(.imx-navmenu-wrap[data-menu="Platform"]:hover)  .imx-nav__item[data-menu="Platform"]  .imx-navlink,
+.imx-nav:has(.imx-navmenu-wrap[data-menu="Products"]:hover)  .imx-nav__item[data-menu="Products"]  .imx-navlink,
+.imx-nav:has(.imx-navmenu-wrap[data-menu="Solutions"]:hover) .imx-nav__item[data-menu="Solutions"] .imx-navlink,
+.imx-nav:has(.imx-navmenu-wrap[data-menu="Resources"]:hover) .imx-nav__item[data-menu="Resources"] .imx-navlink,
+.imx-nav:has(.imx-navmenu-wrap[data-menu="Company"]:hover)   .imx-nav__item[data-menu="Company"]   .imx-navlink {
+  opacity: 1;
+}
+
+.imx-nav__item:hover .imx-navlink__caret,
+.imx-nav:has(.imx-navmenu-wrap[data-menu="Platform"]:hover)  .imx-nav__item[data-menu="Platform"]  .imx-navlink__caret,
+.imx-nav:has(.imx-navmenu-wrap[data-menu="Products"]:hover)  .imx-nav__item[data-menu="Products"]  .imx-navlink__caret,
+.imx-nav:has(.imx-navmenu-wrap[data-menu="Solutions"]:hover) .imx-nav__item[data-menu="Solutions"] .imx-navlink__caret,
+.imx-nav:has(.imx-navmenu-wrap[data-menu="Resources"]:hover) .imx-nav__item[data-menu="Resources"] .imx-navlink__caret,
+.imx-nav:has(.imx-navmenu-wrap[data-menu="Company"]:hover)   .imx-nav__item[data-menu="Company"]   .imx-navlink__caret {
+  transform: rotate(0deg);
+  opacity: 1;
+}
+
+.imx-nav--dark .imx-nav__item:hover :is(.imx-navlink, .imx-navlink__caret),
+.imx-nav--dark:has(.imx-navmenu-wrap[data-menu="Platform"]:hover)  .imx-nav__item[data-menu="Platform"]  :is(.imx-navlink, .imx-navlink__caret),
+.imx-nav--dark:has(.imx-navmenu-wrap[data-menu="Products"]:hover)  .imx-nav__item[data-menu="Products"]  :is(.imx-navlink, .imx-navlink__caret),
+.imx-nav--dark:has(.imx-navmenu-wrap[data-menu="Solutions"]:hover) .imx-nav__item[data-menu="Solutions"] :is(.imx-navlink, .imx-navlink__caret),
+.imx-nav--dark:has(.imx-navmenu-wrap[data-menu="Resources"]:hover) .imx-nav__item[data-menu="Resources"] :is(.imx-navlink, .imx-navlink__caret),
+.imx-nav--dark:has(.imx-navmenu-wrap[data-menu="Company"]:hover)   .imx-nav__item[data-menu="Company"]   :is(.imx-navlink, .imx-navlink__caret) {
+  color: var(--imx-bright-amber);
+}
+
+.imx-nav--light .imx-nav__item:hover :is(.imx-navlink, .imx-navlink__caret),
+.imx-nav--light:has(.imx-navmenu-wrap[data-menu="Platform"]:hover)  .imx-nav__item[data-menu="Platform"]  :is(.imx-navlink, .imx-navlink__caret),
+.imx-nav--light:has(.imx-navmenu-wrap[data-menu="Products"]:hover)  .imx-nav__item[data-menu="Products"]  :is(.imx-navlink, .imx-navlink__caret),
+.imx-nav--light:has(.imx-navmenu-wrap[data-menu="Solutions"]:hover) .imx-nav__item[data-menu="Solutions"] :is(.imx-navlink, .imx-navlink__caret),
+.imx-nav--light:has(.imx-navmenu-wrap[data-menu="Resources"]:hover) .imx-nav__item[data-menu="Resources"] :is(.imx-navlink, .imx-navlink__caret),
+.imx-nav--light:has(.imx-navmenu-wrap[data-menu="Company"]:hover)   .imx-nav__item[data-menu="Company"]   :is(.imx-navlink, .imx-navlink__caret) {
+  color: var(--imx-bright-marine);
+}
