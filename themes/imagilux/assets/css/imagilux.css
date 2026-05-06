@@ -768,8 +768,10 @@ a:hover, a:hover u { text-decoration: none; }
 .imx-btn--primary:hover { background: #FFDF5C; color: var(--imx-white-smoke); }
 .imx-pdp__hero--marine .imx-btn--primary { background: var(--imx-bright-marine); color: var(--imx-white-smoke); }
 .imx-pdp__hero--marine .imx-btn--primary:hover { background: #1F8AD9; }
-.imx-btn--ghost { background: transparent; color: var(--imx-ink-black); padding: 11px 4px; }
-.imx-btn--ghost u { text-decoration: none; border-bottom: 1.5px solid var(--imx-ink-black); padding-bottom: 2px; }
+.imx-btn--ghost { background: transparent; color: var(--imx-ink-black); padding: 11px 4px; transition: color 150ms ease; }
+.imx-btn--ghost u { text-decoration: none; border-bottom: 1.5px solid var(--imx-ink-black); padding-bottom: 2px; transition: border-color 150ms ease; }
+.imx-btn--ghost:hover { color: var(--imx-bright-amber); }
+.imx-btn--ghost:hover u { border-bottom-color: var(--imx-bright-amber); }
 .imx-btn--ghost-on-dark { background: transparent; color: var(--imx-white-smoke); padding: 11px 4px; transition: color 150ms ease; }
 .imx-btn--ghost-on-dark u { text-decoration: none; border-bottom: 1.5px solid var(--imx-white-smoke); padding-bottom: 2px; transition: border-color 150ms ease; }
 .imx-btn--ghost-on-dark:hover { color: var(--imx-bright-amber); }
