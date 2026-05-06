@@ -683,7 +683,10 @@ p { margin: 0 0 var(--space-4); line-height: var(--lh-normal); text-wrap: pretty
 small { font-size: var(--fs-sm); color: var(--fg-muted); }
 
 a { color: var(--link); text-decoration: none; transition: color var(--dur-fast) var(--ease-standard); }
-a:hover { color: var(--link-hover); text-decoration: underline; text-underline-offset: 3px; }
+/* Scope the global anchor-hover color to non-button anchors. Otherwise
+ * .imx-btn--primary text turns marine on hover (--link-hover) against
+ * its amber background — visually broken. */
+a:not(.imx-btn):hover { color: var(--link-hover); text-decoration: underline; text-underline-offset: 3px; }
 
 code, pre, kbd, samp { font-family: var(--font-mono); font-size: 0.92em; }
 code { background: var(--bg-sunken); padding: 2px 6px; border-radius: var(--radius-sm); }
@@ -761,7 +764,7 @@ a:hover, a:hover u { text-decoration: none; }
   white-space: nowrap;
 }
 .imx-btn--primary { background: var(--imx-bright-amber); color: var(--imx-ink-black); }
-.imx-btn--primary:hover { background: #FFDF5C; }
+.imx-btn--primary:hover { background: #FFDF5C; color: var(--imx-white-smoke); }
 .imx-pdp__hero--marine .imx-btn--primary { background: var(--imx-bright-marine); color: var(--imx-white-smoke); }
 .imx-pdp__hero--marine .imx-btn--primary:hover { background: #1F8AD9; }
 .imx-btn--ghost { background: transparent; color: var(--imx-ink-black); padding: 11px 4px; }
