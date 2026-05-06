@@ -1,0 +1,64 @@
+{{/*
+  Shared PDP template — drives the kit's product-detail shape entirely
+  from page front matter. Used by both /products/<slug>/ and
+  /platform/<slug>/ pages, and is the single source of truth for the
+  PDP markup.
+
+  Front matter contract:
+    accent:    "amber" | "marine"   — drives hero bg, eyebrow tone,
+                                       chevron, button color, icon swatch
+    title:                          — h1 (and HTML <title> via baseof)
+    hero:
+      eyebrow:                      — small uppercase tag above the h1
+      lede:                         — paragraph under the h1
+      ctaPrimary:    {label, href}  — primary button (amber/marine fill)
+      ctaSecondary:  {label, href}  — ghost button on the dark hero
+    features:
+      heading:                      — h2 above the cards
+      items:  [{icon, title, body}] — exactly 6 cards typical;
+                                      icon name resolves to a partial
+                                      under partials/icons/<name>.html
+                                      that emits the inner SVG elements
+
+  Adding a new PDP page = one Markdown file with this front matter,
+  plus icon partials for any new visuals (existing 32 icons cover
+  most cases; see themes/imagilux/layouts/partials/icons/).
+*/}}
+
+{{- $accent  := .Params.accent | default "amber" -}}
+{{/* safeCSS marks the bg/fg strings as trusted CSS — without it Hugo's
+     contextual auto-escaper rewrites them to ZgotmplZ inside style="" */}}
+{{- $bg      := printf "var(--imx-bright-%s)" $accent | safeCSS -}}
+{{- $fg      := cond (eq $accent "amber") "var(--imx-ink-black)" "var(--imx-white-smoke)" | safeCSS -}}
+{{- $hero    := .Params.hero -}}
+{{- $feats   := .Params.features -}}
+
+<section class="imx-pdp__hero imx-pdp__hero--{{ $accent }}">
+  <div class="imx-pdp__inner">
+    <div class="imx-eyebrow imx-eyebrow--{{ $accent }}">{{ $hero.eyebrow }}</div>
+    <h1 class="imx-pdp__title">{{ .Title }}<span class="imx-pdp__chev imx-pcard__chev--{{ $accent }}">›</span></h1>
+    <p class="imx-pdp__lede">{{ $hero.lede }}</p>
+    <div class="imx-hero__ctas">
+      <a class="imx-btn imx-btn--primary" href="{{ $hero.ctaPrimary.href }}">{{ $hero.ctaPrimary.label }} <span class="imx-arr">→</span></a>
+      <a class="imx-btn imx-btn--ghost-on-dark" href="{{ $hero.ctaSecondary.href }}"><u>{{ $hero.ctaSecondary.label }}</u> <span class="imx-arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="imx-features">
+  <div class="imx-pdp__inner">
+    <div class="imx-eyebrow imx-eyebrow--{{ $accent }}">Capabilities</div>
+    <h2 class="imx-h2" style="margin-bottom: 32px;">{{ $feats.heading }}</h2>
+    <div class="imx-features__grid">
+      {{- range $feats.items }}
+      <div class="imx-feature">
+        <div class="imx-feature__icon" style="background: {{ $bg }}; color: {{ $fg }};">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{{ partial (printf "icons/%s.html" .icon) . | safeHTML }}</svg>
+        </div>
+        <h4>{{ .title }}</h4>
+        <p>{{ .body }}</p>
+      </div>
+      {{- end }}
+    </div>
+  </div>
+</section>

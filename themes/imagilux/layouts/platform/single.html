@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div class="imx-pdp">
   {{ partial "site-header.html" . }}
-  {{ partial (printf "platform-detail/%s.html" .File.BaseFileName) . }}
+  {{ partial "pdp/page.html" . }}
   {{ partial "site-footer.html" . }}
 </div>
 {{ end }}
