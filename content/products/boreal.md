@@ -9,9 +9,6 @@ hero:
   ctaPrimary:
     label: Request a demo
     href: /contact/
-  ctaSecondary:
-    label: Read the spec
-    href: '#'
 features:
   heading: Built for the Light Out era.
   items:

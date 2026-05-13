@@ -11,7 +11,7 @@ hero:
     href: /contact/
   ctaSecondary:
     label: Read the spec
-    href: '#'
+    href: https://umf.imagilux.org/
 features:
   heading: Built for the Light Out era.
   items:
