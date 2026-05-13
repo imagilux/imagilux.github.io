@@ -1,4 +1,5 @@
 <header class="imx-nav imx-nav--dark">
+  <input type="checkbox" id="imx-nav-toggle" class="imx-nav__toggle" aria-label="Toggle navigation menu">
   <div class="imx-container imx-nav__inner">
     <a class="imx-nav__logo" href="/" aria-label="Imagilux home">
       <img src="/images/logoDark.svg" alt="Imagilux" height="22">
@@ -13,30 +14,38 @@
       {{- end }}
     </nav>
     <div class="imx-nav__spacer"></div>
-    <a class="imx-btn imx-btn--primary" href="/contact/">Get Started <span class="imx-arr">→</span></a>
+    <a class="imx-btn imx-btn--primary imx-nav__cta-desktop" href="/contact/">Get Started <span class="imx-arr">→</span></a>
+    <label for="imx-nav-toggle" class="imx-nav__hamburger" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </label>
   </div>
 
-  {{- range site.Data.nav.menus }}
-  <div class="imx-navmenu-wrap" data-menu="{{ .label }}">
-    <div class="imx-navmenu" role="menu" aria-label="{{ .label }}">
-      <div class="imx-navmenu__inner imx-navmenu--{{ .layout }}">
-        {{- range .columns }}
-        <div class="imx-navmenu__col">
-          <div class="imx-navmenu__title">{{ .title }}</div>
-          <ul class="imx-navmenu__list">
-            {{- range .items }}
-            <li>
-              <a href="{{ .href | default "#" }}">
-                <span class="imx-navmenu__label">{{ .label }}</span>
-                <span class="imx-navmenu__body">{{ .body }}</span>
-              </a>
-            </li>
-            {{- end }}
-          </ul>
+  <label for="imx-nav-toggle" class="imx-nav__scrim" aria-hidden="true"></label>
+
+  <div class="imx-nav__drawer">
+    {{- range site.Data.nav.menus }}
+    <div class="imx-navmenu-wrap" data-menu="{{ .label }}">
+      <div class="imx-navmenu" role="menu" aria-label="{{ .label }}">
+        <div class="imx-navmenu__inner imx-navmenu--{{ .layout }}">
+          {{- range .columns }}
+          <div class="imx-navmenu__col">
+            <div class="imx-navmenu__title">{{ .title }}</div>
+            <ul class="imx-navmenu__list">
+              {{- range .items }}
+              <li>
+                <a href="{{ .href | default "#" }}">
+                  <span class="imx-navmenu__label">{{ .label }}</span>
+                  <span class="imx-navmenu__body">{{ .body }}</span>
+                </a>
+              </li>
+              {{- end }}
+            </ul>
+          </div>
+          {{- end }}
         </div>
-        {{- end }}
       </div>
     </div>
+    {{- end }}
+    <a class="imx-btn imx-btn--primary imx-nav__cta-mobile" href="/contact/">Get Started <span class="imx-arr">→</span></a>
   </div>
-  {{- end }}
 </header>
