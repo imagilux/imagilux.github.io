@@ -1,0 +1,13 @@
+name = "imagilux-contact"
+main = "src/index.js"
+compatibility_date = "2026-05-13"
+
+# Plaintext config — safe to commit.
+[vars]
+TO_EMAIL = "contact@imagilux.org"
+FROM_EMAIL = "forms@imagilux.org"
+ALLOWED_ORIGIN = "https://www.imagilux.org"
+
+# Secrets (NOT in this file). Set with:
+#   wrangler secret put TURNSTILE_SECRET
+#   wrangler secret put RESEND_API_KEY
