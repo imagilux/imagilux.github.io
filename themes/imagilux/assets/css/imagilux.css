@@ -842,7 +842,10 @@ a:hover, a:hover u { text-decoration: none; }
 .imx-hero--dark { background: var(--imx-ink-black); color: var(--imx-white-smoke); }
 .imx-hero--light { background: var(--imx-white-smoke); color: var(--imx-ink-black); }
 .imx-hero__bg { position: absolute; inset: 0; }
-.imx-hero__bg { left: auto; width: 55%; right: 0; top: 0; bottom: 0; }
+/* Lift the bg box above the hero's top so object-fit:cover crops the
+ * source PNG's dark ceiling instead of showing it as an empty band
+ * under the header. The hero's overflow:hidden clips the overflow. */
+.imx-hero__bg { left: auto; width: 55%; right: 0; top: -120px; bottom: 0; }
 .imx-hero__bg img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
 .imx-hero__scrim { position: absolute; inset: 0; background: linear-gradient(90deg, var(--imx-ink-black) 0%, var(--imx-ink-black) 5%, rgba(17,21,28,0.85) 25%, rgba(17,21,28,0.0) 60%); pointer-events: none; }
 .imx-hero__scrim--light { background: linear-gradient(90deg, var(--imx-white-smoke) 0%, var(--imx-white-smoke) 5%, rgba(245,243,245,0.85) 25%, rgba(245,243,245,0.0) 60%); }
